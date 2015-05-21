@@ -33,8 +33,10 @@ TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := denver
 
 # Kernel
-TARGET_KERNEL_TOOLCHAIN := aarch64-linux-gnu-linaro-4.9
+BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 TARGET_KERNEL_CONFIG := beyondstock_defconfig
+TARGET_KERNEL_CUSTOM_TOOLCHAIN := aarch64-linux-gnu-linaro-4.9
+TARGET_KERNEL_SOURCE := kernel/tegra
 
 # Disable emulator for "make dist" until there is a 64-bit qemu kernel
 BUILD_EMULATOR := false
